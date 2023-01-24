@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.music-player {
+  border-radius: 4px;
+  position: relative;
+  background-color: #fccba2;
+  width: 400px;
+  padding: 35px 35px;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+nav .circle {
+  border-radius: 50%;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  box-shadow: 0 3px 10px rgb(246 125 0 / 40%);
+  cursor: pointer;
+}
+
+.song-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid white;
+  box-shadow: 0 3px 10px rgb(246 125 0 / 40%);
+  
+}
+.active{
+  animation: rotation 30s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.music-player h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.music-player p {
+  font-size: 14px;
+  color: black;
+}
+#progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background-color: hsl(20, 100%, 73%);
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 50px 0;
+}
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: hsl(20, 100%, 68%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 5px 5px rgb(246 125 0 / 40%);
+}
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.controls div {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #ff925c;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgb(246 125 0 / 40%);
+}
+.controls div:nth-child(2) {
+  transform: scale(1.3);
+  background-color: #ff925c;
+  color: #fff;
+}
